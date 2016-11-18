@@ -18,11 +18,5 @@ angular.module('nodeApp',["ui.router","zdy"]).config(function($stateProvider,$ur
    }).success(function(e){
     	$scope.adata=e;
    		console.log(e)
-   }),$http({
-    	url:"http://www.somenote.cn:1510/aut",
-    	method:"get",
-   }).success(function(e){
-    	$scope.kdata=e;
-   		console.log(e)
    })
 })
