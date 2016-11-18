@@ -13,16 +13,30 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/skf.css">
+    <link rel="stylesheet" href="styles/ceshi.css">
     <!-- endbuild -->
   </head>
   <body ng-app="nodeApp">
-  	<button ui-sref="yi">anniuyi</button>
-  	<button ui-sref="er">anniuer</button>
-  	<div ui-view></div>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Add your site or application content here -->
+    <div ng-controller="abc">
+    	<zdy  data="mdata" dataa="sdata" b='1'></zdy>
+    	<zdy  data="adata" dataa="kdata" b='2'></zdy>
+    	
+    </div>
+    <!--<button ui-sref="yi">anniuyi</button>
+  	<button ui-sref="er">anniuer</button>
+  	<div ui-view></div>
+  	<div id="div1"></div>
+  	<div ng-controller="ccc">
+  		{{day|substr}}
+  		<skf data="mdata" b='1'></skf>
+  		<skf data="mdata" b='2'></skf>
+  	</div>
+  	-->
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -35,7 +49,8 @@
     <!-- endbower -->
     <!-- endbuild -->
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
+        <script src="scripts/ceshi.js"></script>
+        <script src="scripts/app2.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/yi.js"></script>
         <script src="scripts/controllers/er.js"></script>

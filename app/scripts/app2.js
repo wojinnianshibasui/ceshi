@@ -1,0 +1,28 @@
+angular.module('nodeApp',["ui.router","zdy"]).config(function($stateProvider,$urlRouterProvider){
+}).controller("abc",function($scope,$http){
+	$http({
+    	url:"http://www.somenote.cn:1510/test",
+    	method:"get",
+   }).success(function(e){
+    	$scope.mdata=e;
+   		console.log(e)
+   }),$http({
+    	url:"http://www.somenote.cn:1510/aut",
+    	method:"get",
+   }).success(function(e){
+    	$scope.sdata=e;
+   		console.log(e)
+   }),$http({
+    	url:"http://www.somenote.cn:1510/test2",
+    	method:"get",
+   }).success(function(e){
+    	$scope.adata=e;
+   		console.log(e)
+   }),$http({
+    	url:"http://www.somenote.cn:1510/aut",
+    	method:"get",
+   }).success(function(e){
+    	$scope.kdata=e;
+   		console.log(e)
+   })
+})

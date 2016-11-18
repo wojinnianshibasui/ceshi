@@ -8,8 +8,8 @@
  *
  * Main module of the application.
  */
-angular
-  .module('nodeApp', ["ui.router"]).config(function($stateProvider,$urlRouterProvider){
+angular.module('nodeApp',["ui.router","skf"]).config(function($stateProvider,$urlRouterProvider){
+	$scope.day = 'cloud'
   	$stateProvider.state("yi",{
   		url:"/yi",
   		templateUrl:"views/yi.html",
@@ -19,4 +19,12 @@ angular
   		templateUrl:"views/er.html",
   		controller:"er"
   	})
-  });
+  }).controller("ccc",function($scope,$http,getdata,filter){
+  	filter.substr(1);
+	$http({
+    	url:"http://www.somenote.cn:1510/aut",
+    	method:"get",
+   }).success(function(e){
+    	$scope.mdata=e;
+   })
+})
